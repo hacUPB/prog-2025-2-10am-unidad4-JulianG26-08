@@ -1,0 +1,20 @@
+import random
+numeros = []
+for i in range (100):
+    aleatorio = random.randint(100,1000)
+    numeros. append(aleatorio)
+print(numeros)
+
+suma = 0 
+
+for i in range(len(numeros)):
+    suma += numeros [i]
+
+prom = suma / len(numeros)
+promedio = sum(numeros) / len(numeros)
+print (f"promedio= {prom}")
+
+
+mayor = max( numeros )
+menor = min( numeros )
+ 
