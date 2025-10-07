@@ -70,3 +70,9 @@ while tiempo_actual < tiempo_vuelo:
 
 print (temp)
 
+valor_maximo = max(temp)
+print(f"Temperatura Máxima: {valor_maximo:.2f} °C")
+valor_minimo = min(temp)
+print(f"Temperatura Mínima: {valor_minimo:.2f} °C")
+promedio = sum(temp) / len(temp)
+print(f"Temperatura Promedio: {promedio:.2f} °C")
