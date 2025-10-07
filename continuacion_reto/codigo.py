@@ -9,6 +9,7 @@ valores = {
     "tiempo_estabilizacion": 5,
     "intervalo_2": 2
 }
+
 Te_actual = Te_inicial
 
 print("1. Boeing 747-8 (k = 5)")
@@ -33,6 +34,7 @@ match opcion:
 
 tiempo_inicio_estabilizacion = tiempo_vuelo - valores["tiempo_estabilizacion"]
 tiempo_actual = 0
+temp = []
 while tiempo_actual < tiempo_vuelo:
     tiempo_actual += valores["intervalo_1"]
 
@@ -61,6 +63,10 @@ while tiempo_actual < tiempo_vuelo:
         print("Fase de estabilización, asegurar para aterrizar")
     else:
         print("No iniciar fase de estabilización, seguir monitoreando.")
+    
+    temp.append(Te_actual)
 
     print(f"Temperatura actual: {Te_actual:.2f} °C")
+
+print (temp)
 
