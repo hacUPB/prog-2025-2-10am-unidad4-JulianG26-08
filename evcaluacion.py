@@ -1,13 +1,15 @@
-
-opcion = True
-while opcion == True:
+temp = []
+valores={}
+opc = True
+while opc== True:
     
     print("1. codigo de temperatura")
-    print("2. salir ")
+    print("2. lista y diccionario ")
+    print("3. salir ")
 
-    opcion = int(input("Selecciona una opción: "))
-
-    match opcion:
+    seccion = int(input("Selecciona una opción: "))
+    
+    match seccion:
         case 1:
             print("ejecutando codigo de temperatura en tren de aterrizaje")
             Te_inicial = float(input("Ingrese la temperatura inicial (°C): "))
@@ -44,7 +46,7 @@ while opcion == True:
 
             tiempo_inicio_estabilizacion = tiempo_vuelo - valores["tiempo_estabilizacion"]
             tiempo_actual = 0
-            temp = []
+            
             while tiempo_actual < tiempo_vuelo:
                 tiempo_actual += valores["intervalo_1"]
 
@@ -87,4 +89,9 @@ while opcion == True:
             promedio = sum(temp) / len(temp)
             print(f"Temperatura Promedio: {promedio:.2f} °C")
         case 2:
-            opcion = False
+            for k, v in valores.items():
+                print(f"{k} : {v}")
+            for i in temp:
+                print (i)
+        case 3:
+            opc = False
